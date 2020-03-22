@@ -7,6 +7,12 @@ package cn.sevenyuan.sort;
  */
 public class QuickSort {
 
+    public static void main(String[] args) {
+        int[]  nums = new int[] {9, 6, 2, 5, 1};
+        quickSort(nums, 0, nums.length - 1);
+        System.out.println(nums);
+    }
+
     private static void quickSort(int[] numbers, int low, int high) {
         if (low >= high) {
             return;
