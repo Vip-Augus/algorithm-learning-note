@@ -25,6 +25,7 @@ public class KthNode {
         if (pRoot == null) {
             return null;
         }
+        addNode(pRoot);
         if (k >= 1 && k <= list.size()) {
             return list.get(k - 1);
         }
