@@ -9,6 +9,19 @@ import cn.sevenyuan.base.TreeNode;
  */
 public class IsBinarySearchTree {
 
+    private static IsBinarySearchTree instance;
+
+    public static IsBinarySearchTree getInstance() {
+        if (instance == null) {
+            synchronized (IsBinarySearchTree.class) {
+                if (instance == null) {
+                    instance = new IsBinarySearchTree();
+                }
+            }
+        }
+        return instance;
+    }
+
     public static void main(String[] args) {
 
     }
