@@ -24,4 +24,9 @@ public class ListNode {
         this.next = node;
         return next;
     }
+
+    public ListNode next(int val) {
+        this.next = new ListNode(val);
+        return next;
+    }
 }
