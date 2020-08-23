@@ -13,12 +13,25 @@ public class QuickSort {
         System.out.println(nums);
     }
 
+    /**
+     * 遍历 low 到 high 之间的数据，
+     * 将小于 pivot 的放到左边，将大于 pivot 的放到右边，将 pivot 放到中间。
+     * 经过这一步骤之后，数组 low 到 high 之间的数据就被分成了三个部分，
+     *
+     * 前面 low 到 q-1 之间都是小于 pivot 的，
+     * 中间是 pivot，
+     * 后面的 q+1 到 high 之间是大于 pivot 的。
+     * @param numbers
+     * @param low
+     * @param high
+     */
     private static void quickSort(int[] numbers, int low, int high) {
         if (low >= high) {
             return;
         }
         int i = low;
         int j = high;
+        // 也可以写作 pivot 分区点
         int key = numbers[low];
         while (i < j) {
             // 这里比较规则比较特殊，比较的是字符大小，即 33 比 321 大
